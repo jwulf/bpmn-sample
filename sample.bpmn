@@ -26,7 +26,7 @@
       <bpmn:outgoing>SequenceFlow_0w1mhzi</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="SequenceFlow_07dnrbz" name="Wet weather" sourceRef="ExclusiveGateway_0657ahr" targetRef="ServiceTask_0fkm6l0">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">weather_code=="2xx" || weather_code=="3xx" || weather_code=="5xx" || weather_code=="6xx"</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=(weather_code="2xx" or weather_code="3xx" or weather_code="5xx" or weather_code="6xx")</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:serviceTask id="ServiceTask_1hjoz1r" name="Leave the umbrella">
       <bpmn:extensionElements>
